@@ -1,9 +1,12 @@
 package gdt.assets;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListeDeTaches {
+public class ListeDeTaches  implements Serializable{
+
+	private static final long serialVersionUID = -6024098739190037197L;
 	
 	private String titre;
 	private List<Tache> taches;

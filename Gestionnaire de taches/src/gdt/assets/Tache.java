@@ -1,11 +1,15 @@
 
 package gdt.assets;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
-public class Tache {
-    private String titre;
+public class Tache  implements Serializable{
+
+	private static final long serialVersionUID = -3466802709741483618L;
+	
+	private String titre;
     private String description;
     private Boolean fini;
     private long id;
