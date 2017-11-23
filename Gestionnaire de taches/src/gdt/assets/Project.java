@@ -1,0 +1,82 @@
+package gdt.assets;
+
+import gdt.user.User;
+import javafx.beans.property.*;
+
+import java.io.Serializable;
+import java.util.List;
+
+public class Project implements Serializable{
+
+	private static final long serialVersionUID = -6024098739190037197L;
+	
+	private StringProperty title;
+	private ListProperty<Task> tasks;
+	private LongProperty userId;
+	private BooleanProperty isprivate;
+
+	// Constuctors
+	public Project( String title, long userId, boolean isprivate) {
+		tasks = new SimpleListProperty<>();
+		setTitle( title);
+		setUserId( userId);
+		setPrivate( isprivate);
+	}
+	
+	public Project( String title, long userId) {
+		this( title, userId, false);
+	}
+	
+	public Project( String title) {
+		this( title, User.GUEST_ID);
+	}
+
+	// Propreties
+    public StringProperty titleProperty() {
+        return title;
+    }
+    public ListProperty<Task> tasksListProprety(){
+	    return tasks;
+    }
+    public LongProperty userId(){
+        return userId;
+    }
+    public BooleanProperty isprivateProprety(){
+        return isprivate;
+    }
+
+    // Getters
+	protected List<Task> getTasks(){
+		return tasks.get();
+	}
+	protected Task getTask( int index) {
+		if (index < 0 || index >= tasks.size())
+			return null;
+		return tasks.get( index);
+	}
+	protected String getTitle() {
+		return title.get();
+	}
+	protected long getUserId( ) {
+		return userId.get();
+	}
+	protected boolean isPrivate( ) {
+		return isprivate.get();
+	}
+
+	// Setters
+	protected void setTitle( String title) {
+		this.title.set( title);
+	}
+	private void setUserId( long userId){
+		this.userId.set( userId);
+    }
+	protected void setPrivate( boolean isprivate) {
+		if (getUserId() != User.GUEST_ID)
+			this.isprivate.set( isprivate);
+	}
+	protected void addTask( Task task) {
+		tasks.add( task);
+	}
+
+}
