@@ -1,23 +1,38 @@
 package gdt.assets;
 
 import gdt.user.User;
-import javafx.beans.property.*;
+
+import javafx.beans.property.StringProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.LongProperty;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author Tom KAUFFELD
+ * @version 1
+ * @see gdt.user.User
+ * @see gdt.assets.Task
+ * @see javafx.beans.property.Property
+ * @see java.io.Serializable
+ */
 public class Project implements Serializable{
 
 	private static final long serialVersionUID = -6024098739190037197L;
 	
-	private StringProperty title;
-	private ListProperty<Task> tasks;
-	private LongProperty userId;
-	private BooleanProperty isprivate;
+	private StringProperty title = new SimpleStringProperty();
+	private ListProperty<Task> tasks = new SimpleListProperty<>();
+	private LongProperty userId = new SimpleLongProperty();
+	private BooleanProperty isprivate = new SimpleBooleanProperty();
 
 	// Constuctors
 	public Project( String title, long userId, boolean isprivate) {
-		tasks = new SimpleListProperty<>();
 		setTitle( title);
 		setUserId( userId);
 		setPrivate( isprivate);
