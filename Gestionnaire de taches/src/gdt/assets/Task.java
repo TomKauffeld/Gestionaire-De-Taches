@@ -77,16 +77,16 @@ public class Task implements Serializable{
     }
 
     /**
-     * Gets the ObjectProperty<LocalDate> for the beginDate of the task
-     * @return the ObjectProperty<LocalDate> (beginDate)
+     * Gets the ObjectProperty LocalDate  for the beginDate of the task
+     * @return the ObjectProperty (LocalDate) (beginDate)
      */
     public ObjectProperty<LocalDate> beginDateProperty( ) {
         return beginDate;
     }
 
     /**
-     * Gets the ObjectProperty<LocalDate> for the endDate of the task
-     * @return the ObjectProperty<LocalDate> (endDate)
+     * Gets the ObjectProperty LocalDate  for the endDate of the task
+     * @return the ObjectProperty (LocalDate) (endDate)
      */
     public ObjectProperty<LocalDate> endDateProperty( ) {
         return endDate;
