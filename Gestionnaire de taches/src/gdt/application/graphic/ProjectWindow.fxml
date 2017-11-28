@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane id="AnchorPane" dividerPositions="0.22" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+    <items>
+      <ListView prefHeight="398.0" prefWidth="43.0" />
+        
+      <!--ProjectsView fx:id="projectsView" prefHeight="398.0" prefWidth="127.0" /-->
+      <SplitPane dividerPositions="0.8391959798994975" orientation="VERTICAL" prefHeight="398.0" prefWidth="356.0">
+         <items>
+            <AnchorPane fx:id="task" prefHeight="330.0" prefWidth="174.0" />
+            <FlowPane>
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                      <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children> 
+                        <Label fx:id="labelUserName" text="username" />
+                        <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
+                        <Label fx:id="labelPassword" text="password" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="connectionButton" mnemonicParsing="false" text="Connection" />
+               </children>
+            </FlowPane>
+         </items>
+      </SplitPane>
+   </items>
+</SplitPane>
