@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane id="AnchorPane" dividerPositions="0.22" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<SplitPane id="AnchorPane" dividerPositions="0.22" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="gdt.application.graphic.ProjectWindowController">
     <items>
       <ListView prefHeight="398.0" prefWidth="43.0" />
         

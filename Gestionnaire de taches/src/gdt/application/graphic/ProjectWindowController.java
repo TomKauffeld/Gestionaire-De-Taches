@@ -52,7 +52,7 @@ public class ProjectWindowController {
     }
     */
     public void initialize(){
-        labelUserName.textProperty().bind(myProject.get().titleProperty());
+        labelUserName.textProperty().bind(IdConnectionField.textProperty());
         
     }
     
