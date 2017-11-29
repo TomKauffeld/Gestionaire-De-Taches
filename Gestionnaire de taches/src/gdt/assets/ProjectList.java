@@ -5,13 +5,15 @@ import javafx.beans.property.SimpleListProperty;
 
 import java.io.Serializable;
 import java.util.List;
+import javafx.collections.FXCollections;
 
 public class ProjectList implements Serializable{
 
     private ListProperty<Project> projects;
 
     public ProjectList(){
-        projects = new SimpleListProperty<>();
+        projects = new SimpleListProperty<>(FXCollections.observableArrayList());
+        addProject( new Project( "Salut"));
     }
 
     public List<Project> getProjects( ){
@@ -26,15 +28,11 @@ public class ProjectList implements Serializable{
         return projects;
     }
 
-    public void setProject( int index, Project project){
-        projects.set( index, project);
-    }
-
     public void removeProject( int index){
         projects.remove( index);
     }
 
     public void addProject( Project project){
-        setProject( projects.size(), project);
+        projects.add(project);
     }
 }

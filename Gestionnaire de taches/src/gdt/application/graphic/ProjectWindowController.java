@@ -6,6 +6,7 @@
 package gdt.application.graphic;
 
 import gdt.assets.Project;
+import gdt.assets.ProjectList;
 import static javafx.application.ConditionalFeature.FXML;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
@@ -15,6 +16,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.util.Callback;
 
 /**
  *
@@ -38,22 +42,14 @@ public class ProjectWindowController {
     private Label labelPassword;
     
     @FXML
-    private ProjectsView projectsView;
+    private ListView<Project> projectList;
     
-    private final ObjectProperty<Project> myProject = new SimpleObjectProperty<>(new Project("theProject",21516,false)); 
-        public final Project getProject() { return myProject.get(); }
-        public final void setMyProject(Project value) { myProject.set(value);}
-        public ObjectProperty<Project> myProjectProperty() { return myProject; }
-    /* 
-    @FXML
-    private void handleButtonAction(ActionEvent event){
-        
-        
-    }
-    */
+    private ProjectList projectL = new ProjectList();
+    
+    
     public void initialize(){
-        labelUserName.textProperty().bind(IdConnectionField.textProperty());
-        
+        projectList.itemsProperty().bind(projectL.projectsProperty());
+        projectList.setCellFactory((ListView<Project> List) -> new ProjectCell());
     }
     
 }

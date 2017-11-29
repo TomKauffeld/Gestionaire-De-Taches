@@ -6,6 +6,7 @@ import javafx.beans.property.*;
 
 import java.io.Serializable;
 import java.util.List;
+import javafx.collections.FXCollections;
 
 /**
  * @author Tom KAUFFELD
@@ -20,7 +21,7 @@ public class Project implements Serializable{
 	private static final long serialVersionUID = -6024098739190037197L;
 	
 	private StringProperty title = new SimpleStringProperty();
-	private ListProperty<Task> tasks = new SimpleListProperty<>();
+	private ListProperty<Task> tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
 	private LongProperty userId = new SimpleLongProperty();
 	private BooleanProperty visible = new SimpleBooleanProperty();
 
