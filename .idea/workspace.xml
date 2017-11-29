@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8338003-c8ae-48ed-ab5d-03bf5c724b8e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,14 +65,22 @@
       <file leaf-file-name="ProjectList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="213">
+              <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,7 +91,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-              <folding />
+              <folding>
+                <marker date="1511948664548" expanded="true" signature="1570:1597" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,12 +101,13 @@
       <file leaf-file-name="GraphicApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="323">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
+                <marker date="1511948664509" expanded="true" signature="527:564" ph="{...}" />
+                <marker date="1511948664509" expanded="true" signature="604:614" ph=" { " />
+                <marker date="1511948664509" expanded="true" signature="628:634" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -111,7 +118,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-              <folding />
+              <folding>
+                <marker date="1511948664528" expanded="true" signature="419:1923" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="685:1911" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="702:1892" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="802:1874" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="828:1850" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="857:1727" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="897:1062" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="1099:1255" ph="..." />
+                <marker date="1511948664528" expanded="true" signature="1287:1697" ph="..." />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -471,8 +488,9 @@
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
+            <marker date="1511948664509" expanded="true" signature="527:564" ph="{...}" />
+            <marker date="1511948664509" expanded="true" signature="604:614" ph=" { " />
+            <marker date="1511948664509" expanded="true" signature="628:634" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -609,8 +627,9 @@
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
+            <marker date="1511948664509" expanded="true" signature="527:564" ph="{...}" />
+            <marker date="1511948664509" expanded="true" signature="604:614" ph=" { " />
+            <marker date="1511948664509" expanded="true" signature="628:634" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -798,7 +817,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1511948664528" expanded="true" signature="419:1923" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="685:1911" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="702:1892" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="802:1874" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="828:1850" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="857:1727" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="897:1062" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="1099:1255" ph="..." />
+            <marker date="1511948664528" expanded="true" signature="1287:1697" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -809,18 +838,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1511948664548" expanded="true" signature="1570:1597" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
+            <marker date="1511948664509" expanded="true" signature="527:564" ph="{...}" />
+            <marker date="1511948664509" expanded="true" signature="604:614" ph=" { " />
+            <marker date="1511948664509" expanded="true" signature="628:634" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -840,14 +872,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="213">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
           </folding>
         </state>
       </provider>
