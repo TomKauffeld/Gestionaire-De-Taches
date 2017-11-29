@@ -2,14 +2,7 @@ package gdt.assets;
 
 import gdt.user.User;
 
-import javafx.beans.property.StringProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -27,7 +20,7 @@ public class Project implements Serializable{
 	private static final long serialVersionUID = -6024098739190037197L;
 	
 	private StringProperty title = new SimpleStringProperty();
-	private ListProperty<Task> tasks = new SimpleListProperty<>();
+	private ListProperty<ObjectProperty<Task>> tasks = new SimpleListProperty<>();
 	private LongProperty userId = new SimpleLongProperty();
 	private BooleanProperty visible = new SimpleBooleanProperty();
 
@@ -80,7 +73,7 @@ public class Project implements Serializable{
      * Gets the ListProperty of the tasks of the project
      * @return the ListProperty of Task(s) (tasks)
      */
-    public ListProperty<Task> tasksListProprety(){
+    public ListProperty<ObjectProperty<Task>> tasksListProprety(){
 	    return tasks;
     }
 
@@ -108,7 +101,7 @@ public class Project implements Serializable{
      *  Getter for the tasks
      * @return the task list of the project
      */
-	protected List<Task> getTasks(){
+	protected List<ObjectProperty<Task>> getTasks(){
 		return tasks.get();
 	}
 
@@ -117,7 +110,7 @@ public class Project implements Serializable{
      * @param index the index of the task
      * @return the task at the index "index" in the taskList of the project
      */
-	protected Task getTask( int index) {
+	protected ObjectProperty<Task> getTask( int index) {
 		if (index < 0 || index >= tasks.size())
 			return null;
 		return tasks.get( index);
@@ -183,7 +176,9 @@ public class Project implements Serializable{
      * @param task  the task to add to the task List of the project
      */
 	protected void addTask( Task task) {
-		tasks.add( task);
+		ObjectProperty<Task> taskP = new SimpleObjectProperty<>();
+		taskP.set( task);
+		tasks.add( taskP);
 	}
 
 }
