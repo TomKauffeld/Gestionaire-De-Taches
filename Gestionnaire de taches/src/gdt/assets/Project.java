@@ -20,7 +20,7 @@ public class Project implements Serializable{
 	private static final long serialVersionUID = -6024098739190037197L;
 	
 	private StringProperty title = new SimpleStringProperty();
-	private ListProperty<ObjectProperty<Task>> tasks = new SimpleListProperty<>();
+	private ListProperty<Task> tasks = new SimpleListProperty<>();
 	private LongProperty userId = new SimpleLongProperty();
 	private BooleanProperty visible = new SimpleBooleanProperty();
 
@@ -73,7 +73,7 @@ public class Project implements Serializable{
      * Gets the ListProperty of the tasks of the project
      * @return the ListProperty of Task(s) (tasks)
      */
-    public ListProperty<ObjectProperty<Task>> tasksListProprety(){
+    public ListProperty<Task> tasksListProprety(){
 	    return tasks;
     }
 
@@ -101,7 +101,7 @@ public class Project implements Serializable{
      *  Getter for the tasks
      * @return the task list of the project
      */
-	protected List<ObjectProperty<Task>> getTasks(){
+	protected List<Task> getTasks(){
 		return tasks.get();
 	}
 
@@ -110,7 +110,7 @@ public class Project implements Serializable{
      * @param index the index of the task
      * @return the task at the index "index" in the taskList of the project
      */
-	protected ObjectProperty<Task> getTask( int index) {
+	protected Task getTask( int index) {
 		if (index < 0 || index >= tasks.size())
 			return null;
 		return tasks.get( index);
@@ -176,9 +176,7 @@ public class Project implements Serializable{
      * @param task  the task to add to the task List of the project
      */
 	protected void addTask( Task task) {
-		ObjectProperty<Task> taskP = new SimpleObjectProperty<>();
-		taskP.set( task);
-		tasks.add( taskP);
+		tasks.add( task);
 	}
 
 }
