@@ -7,6 +7,9 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -27,6 +30,22 @@ public class Task implements Serializable{
     private BooleanProperty done = new SimpleBooleanProperty();
     private ObjectProperty<LocalDate> beginDate = new SimpleObjectProperty<>();
     private ObjectProperty<LocalDate> endDate = new SimpleObjectProperty<>();
+
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        out.writeUTF( getTitle());
+        out.writeUTF( getDescription());
+        out.writeBoolean( isDone());
+        out.writeObject( getBeginDate());
+        out.writeObject( getEndDate());
+    }
+
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+        title.set( in.readUTF());
+        description.set( in.readUTF());
+        done.set( in.readBoolean());
+        beginDate.set( (LocalDate) in.readObject());
+        endDate.set( (LocalDate) in.readObject());
+    }
 
     // /////////// //
     // Constructor //
@@ -116,7 +135,7 @@ public class Task implements Serializable{
      * Getter for the beginDate
      * @return the date the task should begin
      */
-    protected LocalDate getBegin(){
+    protected LocalDate getBeginDate(){
         return beginDate.get();
     }
 
@@ -124,7 +143,7 @@ public class Task implements Serializable{
      * Getter for the endDate
      * @return the date the task should be finished
      */
-    protected LocalDate getEnd(){
+    protected LocalDate getEndDate(){
         return endDate.get();
     }
 

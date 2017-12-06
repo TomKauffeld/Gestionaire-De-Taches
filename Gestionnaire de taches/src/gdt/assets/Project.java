@@ -4,6 +4,9 @@ import gdt.user.User;
 
 import javafx.beans.property.*;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.List;
 import javafx.collections.FXCollections;
@@ -25,6 +28,28 @@ public class Project implements Serializable{
 	private LongProperty userId = new SimpleLongProperty();
 	private BooleanProperty visible = new SimpleBooleanProperty();
 
+
+	private void writeObject(ObjectOutputStream out) throws IOException{
+		out.writeUTF( title.get());
+		out.writeLong( userId.get());
+		out.writeBoolean( visible.get());
+		if(tasks==null || tasks.getValue()==null) {
+			out.writeInt(0);
+			return;
+		}
+		out.writeInt( tasks.size());
+		for(Task task : tasks)
+			out.writeObject(task);
+	}
+
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+		title.set( in.readUTF());
+		userId.set( in.readLong());
+		visible.set( in.readBoolean());
+		int nbList = in.readInt();
+		for (int i = 0; i < nbList; i++)
+			tasks.add( (Task) in.readObject());
+	}
 	// /////////// //
 	// Constuctors //
 	// /////////// //
