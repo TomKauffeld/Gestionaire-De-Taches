@@ -6,16 +6,17 @@
 package gdt.application.graphic;
 
 import gdt.assets.Project;
+import gdt.assets.Task;
 import javafx.scene.control.ListCell;
 
 /**
  *
  * @author fldelcroix
  */
-public class ProjectCell extends ListCell<Project> {
+public class TaskCell extends ListCell<Task> {
     
     @Override
-    protected void updateItem(Project item, boolean empty){
+    protected void updateItem(Task item, boolean empty){
         super.updateItem(item, empty);
         if (item != null)
             textProperty().bind(item.titleProperty());

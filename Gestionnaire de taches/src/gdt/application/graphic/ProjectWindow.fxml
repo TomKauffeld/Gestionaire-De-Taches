@@ -6,26 +6,61 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane id="AnchorPane" dividerPositions="0.22" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60" fx:controller="gdt.application.graphic.ProjectWindowController">
+<SplitPane id="AnchorPane" dividerPositions="0.2809364548494983" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gdt.application.graphic.ProjectWindowController">
     <items>
-      <ListView fx:id="projectList" prefHeight="398.0" prefWidth="43.0" />
-        
-      <!--ProjectsView fx:id="projectsView" prefHeight="398.0" prefWidth="127.0" /-->
-      <SplitPane dividerPositions="0.8391959798994975" orientation="VERTICAL" prefHeight="398.0" prefWidth="356.0">
-         <items>
-            <AnchorPane fx:id="task" prefHeight="330.0" prefWidth="174.0" />
-            <FlowPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ListView fx:id="projectList" onMouseClicked="#projectSelected" prefHeight="312.0" prefWidth="159.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <VBox alignment="CENTER" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane>
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" />
-                      <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints vgrow="SOMETIMES" />
-                      <RowConstraints vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
-                     <children> 
+                     <children>
+                        <TextField GridPane.columnIndex="1" />
+                        <Label text="title" />
+                        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="private" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Button alignment="CENTER" mnemonicParsing="false" text="add new task" />
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ScrollPane prefHeight="253.0" prefWidth="462.0" BorderPane.alignment="CENTER">
+               <content>
+                  <SplitPane prefHeight="327.0" prefWidth="440.0">
+                     <items>
+                        <ListView fx:id="taskList" />
+                     </items>
+                  </SplitPane>
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <FlowPane prefWidth="462.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
                         <Label fx:id="labelUserName" text="username" />
                         <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
                         <Label fx:id="labelPassword" text="password" GridPane.rowIndex="1" />
@@ -35,7 +70,7 @@
                   <Button fx:id="connectionButton" mnemonicParsing="false" text="Connection" />
                </children>
             </FlowPane>
-         </items>
-      </SplitPane>
+         </bottom>
+      </BorderPane>
    </items>
 </SplitPane>
