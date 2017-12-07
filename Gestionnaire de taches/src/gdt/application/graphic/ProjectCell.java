@@ -10,7 +10,9 @@ import javafx.scene.control.ListCell;
 
 /**
  *
- * @author fldelcroix
+ * @author Florian DELCROIX
+ * @version 1
+ * 
  */
 public class ProjectCell extends ListCell<Project> {
     
@@ -19,8 +21,11 @@ public class ProjectCell extends ListCell<Project> {
         super.updateItem(item, empty);
         if (item != null)
             textProperty().bind(item.titleProperty());
-        else
+        else{
             textProperty().unbind();
+            textProperty().set( "");
+        }
+            
     }
     
     

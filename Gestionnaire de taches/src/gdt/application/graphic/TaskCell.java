@@ -11,7 +11,8 @@ import javafx.scene.control.ListCell;
 
 /**
  *
- * @author fldelcroix
+ * @author Florian DELCROIX
+ * @version 1
  */
 public class TaskCell extends ListCell<Task> {
     
@@ -20,8 +21,11 @@ public class TaskCell extends ListCell<Task> {
         super.updateItem(item, empty);
         if (item != null)
             textProperty().bind(item.titleProperty());
-        else
+        else{
             textProperty().unbind();
+            textProperty().set("");
+        }
+            
     }
     
     

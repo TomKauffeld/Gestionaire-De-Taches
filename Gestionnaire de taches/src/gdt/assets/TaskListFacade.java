@@ -1,6 +1,8 @@
+
 package gdt.assets;
 
 import gdt.user.User;
+import gdt.user.UserBase;
 import javafx.beans.property.ListProperty;
 
 import java.time.LocalDate;
@@ -38,6 +40,11 @@ public class TaskListFacade {
 
     public ListProperty<Project> projectsProperty(){
         return projectList.projectsProperty();
+    }
+    
+    public boolean addNewUser(String password, String username){
+        
+        
     }
 
 }
