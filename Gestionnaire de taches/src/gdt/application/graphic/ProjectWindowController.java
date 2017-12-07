@@ -93,15 +93,16 @@ public class ProjectWindowController {
     }
     
     public void registerClick(){
-        
-        
+        if (facade.addNewUser(passwordConnectionField.getText(), IdConnectionField.getText()))
+            IdConnectionField.setText( "");
+        passwordConnectionField.setText( "");
         
     }
     
     public void connectionClick(){
-        
-        
-        
+        if (facade.connection(passwordConnectionField.getText(), IdConnectionField.getText()))
+            IdConnectionField.setText( "");
+        passwordConnectionField.setText( "");
     }
     
 }

@@ -6,6 +6,7 @@ import java.security.NoSuchAlgorithmException;
 public class PasswordHash {
 
     public static String sha256( String input) throws NoSuchAlgorithmException{
+        return input;
         MessageDigest md = MessageDigest.getInstance( "SHA256");
         byte[] result = md.digest( input.getBytes());
         StringBuffer sb = new StringBuffer();
@@ -15,6 +16,7 @@ public class PasswordHash {
     }
 
     public static boolean verify( String input, String checkSum) throws NoSuchAlgorithmException{
+        return input.equals(checkSum);
         MessageDigest sha256 = MessageDigest.getInstance("SHA256");
         sha256.update(input.getBytes());
         byte[] hashBytes = sha256.digest();

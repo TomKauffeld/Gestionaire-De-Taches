@@ -11,6 +11,7 @@ public class TaskListFacade {
 
     private ProjectList projectList = new ProjectList();
     private User connectedUser = User.GUEST_USER;
+    private UserBase userBase = new UserBase();
 
     public TaskListFacade(){
 
@@ -43,8 +44,16 @@ public class TaskListFacade {
     }
     
     public boolean addNewUser(String password, String username){
-        
-        
+        return userBase.addUser(password, username);
+    }
+    
+    public boolean connection(String password, String username){
+        connectedUser = userBase.connectUser(username, password);
+        if (connectedUser == null){
+            connectedUser = User.GUEST_USER;
+            return false;
+        }
+        return true;
     }
 
 }
