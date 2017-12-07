@@ -31,22 +31,6 @@ public class Task implements Serializable{
     private ObjectProperty<LocalDate> beginDate = new SimpleObjectProperty<>();
     private ObjectProperty<LocalDate> endDate = new SimpleObjectProperty<>();
 
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.writeUTF( getTitle());
-        out.writeUTF( getDescription());
-        out.writeBoolean( isDone());
-        out.writeObject( getBeginDate());
-        out.writeObject( getEndDate());
-    }
-
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
-        title.set( in.readUTF());
-        description.set( in.readUTF());
-        done.set( in.readBoolean());
-        beginDate.set( (LocalDate) in.readObject());
-        endDate.set( (LocalDate) in.readObject());
-    }
-
     // /////////// //
     // Constructor //
     // /////////// //
@@ -198,6 +182,37 @@ public class Task implements Serializable{
      */
     protected void setEndDate( LocalDate endDate){
         this.endDate.set( endDate);
+    }
+
+    // ////////// //
+    // Write/Read //
+    // ////////// //
+
+    /**
+     * Writes a task to an OutputStream
+     * @param out the stream to write the task to
+     * @throws IOException
+     */
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        out.writeUTF( getTitle());
+        out.writeUTF( getDescription());
+        out.writeBoolean( isDone());
+        out.writeObject( getBeginDate());
+        out.writeObject( getEndDate());
+    }
+
+    /**
+     * Reads a task from the InputStream
+     * @param in the stream to read the task from
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+        title.set( in.readUTF());
+        description.set( in.readUTF());
+        done.set( in.readBoolean());
+        beginDate.set( (LocalDate) in.readObject());
+        endDate.set( (LocalDate) in.readObject());
     }
     
 }

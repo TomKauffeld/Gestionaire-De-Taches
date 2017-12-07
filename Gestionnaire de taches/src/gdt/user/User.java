@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class User implements Serializable{
 
     public static final long GUEST_ID = -1;
+    public static final User GUEST_USER = new User( GUEST_ID, "", "guest");
 
     private long id;
     private String password;
