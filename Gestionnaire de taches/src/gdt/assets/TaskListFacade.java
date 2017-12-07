@@ -1,6 +1,7 @@
 package gdt.assets;
 
 import gdt.user.User;
+import javafx.beans.property.ListProperty;
 
 import java.time.LocalDate;
 
@@ -21,6 +22,8 @@ public class TaskListFacade {
     }
 
     public void addNewProject( String title, boolean visible){
+        if (!isConnected())
+            visible = true;
         projectList.addProject( new Project( title, connectedUser.getId(), visible));
     }
 
@@ -31,6 +34,10 @@ public class TaskListFacade {
 
     public boolean isConnected( ){
         return (connectedUser.getId() != User.GUEST_ID);
+    }
+
+    public ListProperty<Project> projectsProperty(){
+        return projectList.projectsProperty();
     }
 
 }
