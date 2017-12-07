@@ -1,6 +1,9 @@
 package gdt.user;
 
+import security.PasswordHash;
+
 import java.io.Serializable;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *  @author Tom KAUFFELD
@@ -42,7 +45,11 @@ public class User implements Serializable{
      *          false   if the password is incorrect
      */
     public boolean isPasswordCorrect( String password){
-        return (getPassword().equals( password));
+        try {
+            return PasswordHash.verify( password, this.password);
+        } catch (NoSuchAlgorithmException e) {
+            return false;
+        }
     }
 
     // /////// //
@@ -64,14 +71,6 @@ public class User implements Serializable{
         return username;
     }
 
-    /**
-     * Getter for the password (private)
-     * @return  the password of the user
-     */
-    private String getPassword( ){
-        return password;
-    }
-
     // /////// //
     // Setters //
     // /////// //
@@ -88,7 +87,11 @@ public class User implements Serializable{
      * @param password the new password for the user
      */
     private void setPassword( String password) {
-        this.password = password;
+        try {
+            this.password = PasswordHash.sha256( password);
+        } catch (NoSuchAlgorithmException e) {
+            this.password = "ERROR";
+        }
     }
 
     /**
