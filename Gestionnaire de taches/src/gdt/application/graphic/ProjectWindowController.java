@@ -27,9 +27,6 @@ import javafx.scene.layout.FlowPane;
  */
 public class ProjectWindowController {
     
-    private static final String PROJECTS_PATH = "";
-    private static final String USERS_PATH = "";
-    
     //connection
     @FXML
     private PasswordField passwordConnectionField;
@@ -90,8 +87,6 @@ public class ProjectWindowController {
     
     
     public void initialize(){
-        //facade.loadProjects( PROJECTS_PATH);
-        //facade.loadUsers( USERS_PATH);
         projectList.itemsProperty().bind(facade.projectsProperty());
         projectList.setCellFactory((ListView<Project> List) -> new ProjectCell());
         taskList.setCellFactory((ListView<Task> List) -> new TaskCell());
