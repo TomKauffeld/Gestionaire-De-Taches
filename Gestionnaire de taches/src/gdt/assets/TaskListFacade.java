@@ -5,6 +5,7 @@ import gdt.user.User;
 import gdt.user.UserBase;
 import javafx.beans.property.ListProperty;
 
+import java.io.*;
 import java.time.LocalDate;
 
 public class TaskListFacade {
@@ -15,6 +16,36 @@ public class TaskListFacade {
 
     public TaskListFacade(){
 
+    }
+
+    public void saveProjects( String path){
+        try{
+            FileOutputStream fo = new FileOutputStream( path);
+            ObjectOutputStream out = new ObjectOutputStream( fo);
+            out.writeObject( projectList);
+            out.close();
+            fo.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadProjects( String path){
+        try{
+            FileInputStream fi = new FileInputStream( path);
+            ObjectInputStream in = new ObjectInputStream( fi);
+            projectList = (ProjectList) in.readObject();
+            in.close();
+            fi.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addNewProject( String title){
