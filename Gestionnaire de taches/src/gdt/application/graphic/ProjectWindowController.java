@@ -9,6 +9,7 @@ import gdt.assets.Project;
 import gdt.assets.ProjectList;
 import gdt.assets.Task;
 import gdt.assets.TaskListFacade;
+import java.time.LocalDate;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -60,6 +61,24 @@ public class ProjectWindowController {
     private Button addProjectButton;
     
     
+    //add task
+    @FXML
+    private TextField titleTextField;
+    
+    @FXML
+    private TextField descriptionTextField;
+    
+    @FXML
+    private Button addTask;
+    
+    @FXML
+    private Label taskTitle;
+    
+    @FXML
+    private Label taskDescription;
+    
+    
+    
     
     @FXML 
     private FlowPane connectionZone;
@@ -82,7 +101,7 @@ public class ProjectWindowController {
     
     /**
      *
-     * Update the 
+     * 
      * 
     */
     public void projectSelected( ){
@@ -99,7 +118,11 @@ public class ProjectWindowController {
     }
     
     
-    
+    /**
+     *
+     * Add a project
+     * 
+    */
     public void addProject( ){
         String title = titleProject.getText();
         Boolean isprivate = privateProject.isSelected();
@@ -107,6 +130,12 @@ public class ProjectWindowController {
         
     }
     
+    
+    /**
+     *
+     * register a new user
+     * 
+    */
     public void registerClick(){
         if (facade.addNewUser(passwordConnectionField.getText(), IdConnectionField.getText()))
             IdConnectionField.setText( "");
@@ -114,10 +143,30 @@ public class ProjectWindowController {
         
     }
     
+    
+    /**
+     *
+     * connect an user
+     * 
+    */
     public void connectionClick(){
         if (facade.connection(passwordConnectionField.getText(), IdConnectionField.getText()))
             IdConnectionField.setText( "");
         passwordConnectionField.setText( "");
+    }
+    
+    
+    /**
+     *
+     * add a new task
+     * 
+    */
+    public void addTask(){
+        String title = titleTextField.getText();
+        String description = descriptionTextField.getText();
+        facade.addNewTask(projectList.getSelectionModel().selectedItemProperty().getValue(), title, description, true, LocalDate.MIN, LocalDate.MAX);
+                
+        
     }
     
 }
