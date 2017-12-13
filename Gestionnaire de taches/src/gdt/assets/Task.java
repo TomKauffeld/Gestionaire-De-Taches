@@ -25,11 +25,11 @@ public class Task implements Serializable{
 
 	private static final long serialVersionUID = -3466802709741483618L;
 	
-	private StringProperty title = new SimpleStringProperty();
-    private StringProperty description = new SimpleStringProperty();
-    private BooleanProperty done = new SimpleBooleanProperty();
-    private ObjectProperty<LocalDate> beginDate = new SimpleObjectProperty<>();
-    private ObjectProperty<LocalDate> endDate = new SimpleObjectProperty<>();
+	private transient StringProperty title = new SimpleStringProperty();
+    private transient StringProperty description = new SimpleStringProperty();
+    private transient BooleanProperty done = new SimpleBooleanProperty();
+    private transient ObjectProperty<LocalDate> beginDate = new SimpleObjectProperty<>();
+    private transient ObjectProperty<LocalDate> endDate = new SimpleObjectProperty<>();
 
     // /////////// //
     // Constructor //
@@ -208,6 +208,11 @@ public class Task implements Serializable{
      * @throws ClassNotFoundException
      */
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+        title = new SimpleStringProperty();
+        description = new SimpleStringProperty();
+        done = new SimpleBooleanProperty();
+        beginDate = new SimpleObjectProperty<>();
+        endDate = new SimpleObjectProperty<>();
         title.set( in.readUTF());
         description.set( in.readUTF());
         done.set( in.readBoolean());

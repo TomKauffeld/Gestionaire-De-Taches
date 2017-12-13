@@ -26,6 +26,10 @@ import javafx.scene.layout.FlowPane;
  */
 public class ProjectWindowController {
     
+    private static final String PROJECTS_PATH = "";
+    private static final String USERS_PATH = "";
+    
+    //connection
     @FXML
     private PasswordField passwordConnectionField;
     
@@ -41,6 +45,8 @@ public class ProjectWindowController {
     @FXML
     private Label labelPassword;
     
+    
+    //add project
     @FXML
     private TextField titleProject;
     
@@ -49,6 +55,11 @@ public class ProjectWindowController {
     
     @FXML
     private CheckBox privateProject;
+    
+    @FXML
+    private Button addProjectButton;
+    
+    
     
     @FXML 
     private FlowPane connectionZone;
@@ -60,6 +71,8 @@ public class ProjectWindowController {
     
     
     public void initialize(){
+        //facade.loadProjects( PROJECTS_PATH);
+        //facade.loadUsers( USERS_PATH);
         projectList.itemsProperty().bind(facade.projectsProperty());
         projectList.setCellFactory((ListView<Project> List) -> new ProjectCell());
         taskList.setCellFactory((ListView<Task> List) -> new TaskCell());
@@ -68,10 +81,10 @@ public class ProjectWindowController {
     
     
     /**
- *
- * Update the 
- * 
- */
+     *
+     * Update the 
+     * 
+    */
     public void projectSelected( ){
         if (taskList.itemsProperty() != null && taskList.itemsProperty().isBound()){
             taskList.itemsProperty().unbind();
@@ -84,6 +97,8 @@ public class ProjectWindowController {
             taskList.itemsProperty().bind( projectList.getSelectionModel().selectedItemProperty().getValue().tasksListProprety());
     
     }
+    
+    
     
     public void addProject( ){
         String title = titleProject.getText();

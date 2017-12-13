@@ -23,10 +23,10 @@ public class Project implements Serializable{
 
 	private static final long serialVersionUID = -6024098739190037197L;
 	
-	private StringProperty title = new SimpleStringProperty();
-	private ListProperty<Task> tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
-	private LongProperty userId = new SimpleLongProperty();
-	private BooleanProperty visible = new SimpleBooleanProperty();
+	private transient StringProperty title = new SimpleStringProperty();
+	private transient ListProperty<Task> tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
+	private transient LongProperty userId = new SimpleLongProperty();
+	private transient BooleanProperty visible = new SimpleBooleanProperty();
 
 
 	private void writeObject(ObjectOutputStream out) throws IOException{
@@ -43,9 +43,13 @@ public class Project implements Serializable{
 	}
 
 	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
-		title.set( in.readUTF());
-		userId.set( in.readLong());
-		visible.set( in.readBoolean());
+            title = new SimpleStringProperty();
+            userId = new SimpleLongProperty();
+            visible = new SimpleBooleanProperty();
+            tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
+		setTitle( in.readUTF());
+		setUserId( in.readLong());
+		setVisible( in.readBoolean());
 		int nbList = in.readInt();
 		for (int i = 0; i < nbList; i++)
 			tasks.add( (Task) in.readObject());

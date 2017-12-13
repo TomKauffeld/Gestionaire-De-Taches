@@ -26,13 +26,13 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <TextField GridPane.columnIndex="1" />
+                        <TextField fx:id="titleProject" GridPane.columnIndex="1" />
                         <Label text="title" />
-                        <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="privateProject" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="private" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <Button alignment="CENTER" mnemonicParsing="false" text="add new task" />
+                  <Button fx:id="addProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addProject" text="add new project" />
                </children>
             </VBox>
          </bottom>
@@ -63,8 +63,8 @@
                         <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
                         <Label fx:id="labelPassword" text="password" GridPane.rowIndex="1" />
                         <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="connectionButton" onMouseClicked="#connectionClick" mnemonicParsing="false" text="Connection" GridPane.columnIndex="2" />
-                        <Button fx:id="registerButton" onMouseClicked="#registerClick" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" text="Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="connectionButton" mnemonicParsing="false" text="Connection" GridPane.columnIndex="2" />
+                        <Button fx:id="registerButton" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" text="Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
