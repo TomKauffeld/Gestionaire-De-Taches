@@ -33,11 +33,6 @@ public class ProjectList implements Serializable{
 
     public ProjectList(){
         projects = new SimpleListProperty<>(FXCollections.observableArrayList());
-        addProject( new Project( "Salut"));
-        addProject( new Project("bye"));
-        getProject(0).addTask(new Task("bonjour", "hello", false, null, null));
-        getProject(0).addTask(new Task("tache2", "hello", false, null, null));
-        getProject(1).addTask(new Task("aurevoir", "adieu", true, null, null));
     }
 
     public List<Project> getProjects( ){

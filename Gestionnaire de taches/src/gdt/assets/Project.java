@@ -199,6 +199,8 @@ public class Project implements Serializable{
 	protected void setVisible( boolean visible) {
 		if (getUserId() != User.GUEST_ID)
 			this.visible.set( visible);
+                else
+                    this.visible.set( true);
 	}
 
     /**

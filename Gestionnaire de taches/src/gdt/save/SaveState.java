@@ -9,10 +9,12 @@ public class SaveState implements Runnable {
     private Object o;
     private String path;
     private Thread thread;
+    private Thread parrent;
 
     public SaveState(Object o, String path){
         this.o = o;
         this.path = path;
+        parrent = Thread.currentThread();
     }
 
     @Override
@@ -36,7 +38,7 @@ public class SaveState implements Runnable {
 
     public synchronized void stop( ){
         try {
-            thread.join();
+            parrent.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

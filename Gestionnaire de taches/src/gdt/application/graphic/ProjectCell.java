@@ -20,7 +20,7 @@ public class ProjectCell extends ListCell<Project> {
     protected void updateItem(Project item, boolean empty){
         super.updateItem(item, empty);
         if (item != null)
-            textProperty().bind(item.titleProperty());
+            textProperty().bind(item.titleProperty().concat( item.visible().getValue() ? " (+)" : " (-)"));
         else{
             textProperty().unbind();
             textProperty().set( "");

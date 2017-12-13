@@ -41,7 +41,7 @@
          <bottom>
             <FlowPane BorderPane.alignment="CENTER">
                <children>
-                  <GridPane>
+                  <GridPane fx:id="gridConnection">
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" />
                         <ColumnConstraints hgrow="SOMETIMES" />
@@ -56,8 +56,8 @@
                         <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
                         <Label fx:id="labelPassword" text="password" GridPane.rowIndex="1" />
                         <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="connectionButton" mnemonicParsing="false" text="Connection" GridPane.columnIndex="2" />
-                        <Button fx:id="registerButton" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" text="Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="connectionButton" onMouseClicked="#connectionClick" mnemonicParsing="false" text="Connection" GridPane.columnIndex="2" />
+                        <Button fx:id="registerButton" onMouseClicked="#registerClick" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" text="Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
@@ -74,16 +74,14 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="addTask" onMouseClicked="#addTask" mnemonicParsing="false" text="Add Task" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-                        <TextField fx:id="descriptionTextField" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <TextField fx:id="titleTextField" text="Title" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <Label fx:id="taskTitle" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
-                        <Label fx:id="taskDescription" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Button fx:id="addTask" mnemonicParsing="false" onMouseClicked="#addTask" text="Add Task" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                        <TextField fx:id="descriptionTextField" text="Description" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <TextField fx:id="titleTextField" text="Title" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="taskDescription" text="Label" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
                      </children>
                   </GridPane>
                </items>

@@ -18,6 +18,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
 /**
  *
@@ -28,6 +29,8 @@ import javafx.scene.layout.FlowPane;
 public class ProjectWindowController {
     
     //connection
+    @FXML
+    private GridPane gridConnection;
     @FXML
     private PasswordField passwordConnectionField;
     
@@ -67,9 +70,6 @@ public class ProjectWindowController {
     
     @FXML
     private Button addTask;
-    
-    @FXML
-    private Label taskTitle;
     
     @FXML
     private Label taskDescription;
@@ -145,8 +145,10 @@ public class ProjectWindowController {
      * 
     */
     public void connectionClick(){
-        if (facade.connection(passwordConnectionField.getText(), IdConnectionField.getText()))
+        if (facade.connection(passwordConnectionField.getText(), IdConnectionField.getText())){
+            gridConnection.setVisible( false);
             IdConnectionField.setText( "");
+        }
         passwordConnectionField.setText( "");
     }
     
@@ -159,7 +161,10 @@ public class ProjectWindowController {
     public void addTask(){
         String title = titleTextField.getText();
         String description = descriptionTextField.getText();
-        facade.addNewTask(projectList.getSelectionModel().selectedItemProperty().getValue(), title, description, true, LocalDate.MIN, LocalDate.MAX);
+        if (projectList.getSelectionModel() != null && 
+                projectList.getSelectionModel().selectedItemProperty() != null &&
+                projectList.getSelectionModel().selectedItemProperty().get() != null)
+            facade.addNewTask(projectList.getSelectionModel().selectedItemProperty().getValue(), title, description, true, LocalDate.MIN, LocalDate.MAX);
                 
         
     }
