@@ -17,12 +17,21 @@ public class TaskListFacade {
     private static final String USERS_PATH = System.getProperty( "user.dir").replace( "\\", "/") + "/users.bin";
 
     private ProjectList projectList = new ProjectList();
-    private User connectedUser = User.GUEST_USER;
+    private User connectedUser;
     private UserBase userBase = new UserBase();
 
     public TaskListFacade(){
         loadProjects();
         loadUsers();
+        setConnectedUser( User.GUEST_USER);
+    }
+    
+    public void setConnectedUser( User user){
+        connectedUser = user;
+    }
+    
+    public User getConnectedUser( ){
+        return connectedUser;
     }
 
     public void saveProjects( ){
@@ -91,7 +100,7 @@ public class TaskListFacade {
 
     public void addNewProject( String title){
         if (isConnected())
-            projectList.addProject( new Project( title, connectedUser.getId()));
+            projectList.addProject( new Project( title, getConnectedUser( ).getId()));
         else
             projectList.addProject( new Project( title));
         saveProjects( );
@@ -100,18 +109,18 @@ public class TaskListFacade {
     public void addNewProject( String title, boolean visible){
         if (!isConnected())
             visible = true;
-        projectList.addProject( new Project( title, connectedUser.getId(), visible));
+        projectList.addProject( new Project( title, getConnectedUser( ).getId(), visible));
         saveProjects( );
     }
 
     public void addNewTask( Project project, String title, String description, boolean done, LocalDate beginDate, LocalDate endDate){
-        if (connectedUser.getId() == project.getUserId() || project.getUserId() == User.GUEST_ID)
+        if (getConnectedUser( ).getId() == project.getUserId() || project.getUserId() == User.GUEST_ID)
             project.addTask( new Task( title, description, done, beginDate, endDate));
         saveProjects( );
     }
 
     public boolean isConnected( ){
-        return (connectedUser.getId() != User.GUEST_ID);
+        return (getConnectedUser( ).getId() != User.GUEST_ID);
     }
 
     public ListProperty<Project> projectsProperty(){
@@ -128,9 +137,9 @@ public class TaskListFacade {
     }
     
     public boolean connection(String password, String username){
-        connectedUser = userBase.connectUser(username, password);
-        if (connectedUser == null){
-            connectedUser = User.GUEST_USER;
+        setConnectedUser( userBase.connectUser(username, password));
+        if (getConnectedUser( ) == null){
+            setConnectedUser( User.GUEST_USER);
             return false;
         }
         return true;

@@ -6,6 +6,9 @@
 package gdt.application.graphic;
 
 import gdt.assets.Project;
+import gdt.user.User;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.ListCell;
 
 /**
@@ -15,12 +18,18 @@ import javafx.scene.control.ListCell;
  * 
  */
 public class ProjectCell extends ListCell<Project> {
+
+    public ProjectCell(){
+        
+    }
     
     @Override
     protected void updateItem(Project item, boolean empty){
         super.updateItem(item, empty);
-        if (item != null)
+        
+        if (item != null){
             textProperty().bind(item.titleProperty().concat( item.visible().getValue() ? " (+)" : " (-)"));
+        }
         else{
             textProperty().unbind();
             textProperty().set( "");

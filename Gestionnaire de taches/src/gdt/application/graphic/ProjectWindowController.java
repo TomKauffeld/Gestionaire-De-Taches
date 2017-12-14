@@ -11,14 +11,20 @@ import gdt.assets.Task;
 import gdt.assets.TaskListFacade;
 import java.time.LocalDate;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 /**
  *
@@ -55,6 +61,9 @@ public class ProjectWindowController {
     private ListView<Project> projectList;
     
     @FXML
+    private Button menuButton;
+    
+    @FXML
     private CheckBox privateProject;
     
     @FXML
@@ -75,10 +84,27 @@ public class ProjectWindowController {
     private Label taskDescription;
     
     
+    //Zones
+    
+    @FXML 
+    private Label projectTitleLabel;
+    
+    @FXML
+    private Label taskTitleLabel;
+    
     
     
     @FXML 
     private FlowPane connectionZone;
+    
+    @FXML
+    private BorderPane borderPane;
+    
+    @FXML
+    private Pane addProjectZone;
+    
+    @FXML
+    private Pane addTaskZone;
     
     @FXML
     private ListView<Task> taskList;
@@ -87,12 +113,41 @@ public class ProjectWindowController {
     
     
     public void initialize(){
+        menuButton.prefWidthProperty().bind( borderPane.widthProperty());
         projectList.itemsProperty().bind(facade.projectsProperty());
         projectList.setCellFactory((ListView<Project> List) -> new ProjectCell());
         taskList.setCellFactory((ListView<Task> List) -> new TaskCell());
-        
+        switchMenu();
     }
     
+    private boolean pro = false;
+    public void switchMenu(){
+        pro = !pro;
+            projectList.setVisible( pro);
+            addProjectZone.setVisible( pro);
+            taskList.setVisible( !pro);
+            addTaskZone.setVisible( !pro);
+        if (pro){
+            menuButton.textProperty().set( "Projects :");
+            
+            taskList.setMaxHeight(0);
+            addTaskZone.setMaxHeight( 0);
+            
+            projectList.setMaxHeight(9999);
+            addProjectZone.setMaxHeight( 9999);
+        }
+        else{
+            menuButton.textProperty().set( "Tasks :");
+            
+            projectList.setMaxHeight(0);
+            addProjectZone.setMaxHeight( 0);
+            
+            taskList.setMaxHeight(9999);
+            addTaskZone.setMaxHeight( 9999);
+            
+        }
+        
+    }
     
     /**
      *
@@ -104,11 +159,45 @@ public class ProjectWindowController {
             taskList.itemsProperty().unbind();
             taskList.itemsProperty().set( null);
         }
-            
-        if (projectList.getSelectionModel() != null && 
+        if (projectTitleLabel.textProperty().isBound())
+            projectTitleLabel.textProperty().unbind();
+        if (!projectTitleLabel.textProperty().get().equals(""))
+            projectTitleLabel.setText( "");
+        if ((projectList.getSelectionModel() != null && 
                 projectList.getSelectionModel().selectedItemProperty() != null &&
-                projectList.getSelectionModel().selectedItemProperty().get() != null)
+                projectList.getSelectionModel().selectedItemProperty().get() != null) &&
+                (projectList.getSelectionModel().getSelectedItem().visible().get() ||
+                projectList.getSelectionModel().getSelectedItem().userIdProperty().get() == facade.getConnectedUser().getId())){
+            projectTitleLabel.textProperty().bind( projectList.getSelectionModel().selectedItemProperty().get().titleProperty());
             taskList.itemsProperty().bind( projectList.getSelectionModel().selectedItemProperty().getValue().tasksListProprety());
+        }
+        taskSelected();
+        switchMenu();
+    }
+    
+    public void taskSelected( ){
+        if (taskDescription.textProperty().isBound())
+            taskDescription.textProperty().unbind();
+        if (!"".equals(taskDescription.textProperty().get()))
+            taskDescription.textProperty().set( "");
+        if (taskTitleLabel.textProperty().isBound())
+            taskTitleLabel.textProperty().unbind();
+        if (!"".equals(taskTitleLabel.textProperty().get()))
+            taskTitleLabel.textProperty().set( "");
+        
+        
+        if (projectList.getSelectionModel() == null || projectList.getSelectionModel().getSelectedItem() == null)
+            return;
+        if (!projectList.getSelectionModel().getSelectedItem().visible().get() && projectList.getSelectionModel().getSelectedItem().userIdProperty().get() != facade.getConnectedUser().getId()){
+            taskDescription.textProperty().set( "Private");
+            return;
+        }
+        if (taskList.selectionModelProperty() != null && 
+                taskList.selectionModelProperty().getValue().selectedItemProperty() != null &&
+                taskList.selectionModelProperty().getValue().selectedItemProperty().get() != null){
+            taskDescription.textProperty().bind(taskList.selectionModelProperty().getValue().getSelectedItem().descriptionProperty());
+            taskTitleLabel.textProperty().bind( taskList.getSelectionModel().getSelectedItem().titleProperty());
+        }
     
     }
     
@@ -146,7 +235,7 @@ public class ProjectWindowController {
     */
     public void connectionClick(){
         if (facade.connection(passwordConnectionField.getText(), IdConnectionField.getText())){
-            gridConnection.setVisible( false);
+            gridConnection.setVisible(false);
             IdConnectionField.setText( "");
         }
         passwordConnectionField.setText( "");
