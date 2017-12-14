@@ -128,9 +128,7 @@ public class TaskListFacade {
     }
     
     public boolean addNewUser(String password, String username){
-        System.out.println( "new");
         boolean ret = userBase.addUser(password, username);
-        System.out.println( "te");
         if (ret)
             saveUsers();
         return ret;
