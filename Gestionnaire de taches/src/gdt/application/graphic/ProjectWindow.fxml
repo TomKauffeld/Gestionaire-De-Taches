@@ -36,10 +36,10 @@
                             </rowConstraints>
                             <children>
                                 <TextField fx:id="titleProject" GridPane.columnIndex="1" />
-                                <Label text="title" />
+                                <Label text="%Title" />
                                 <CheckBox fx:id="privateProject" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Label text="private" GridPane.rowIndex="1" />
-                                <Button fx:id="addProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addProject" text="add new project" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <Label text="%Private" GridPane.rowIndex="1" />
+                                <Button fx:id="addProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addProject" text="%Add_Project" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                             </children>
                         </GridPane>
                         <GridPane fx:id="addTaskZone">
@@ -53,11 +53,11 @@
                                 <RowConstraints vgrow="SOMETIMES" />
                             </rowConstraints>
                             <children>
-                                <Label text="title" />
+                                <Label text="%Title" />
                                 <TextField fx:id="titleTextField" GridPane.columnIndex="1" />
-                                <Label text="description" GridPane.rowIndex="1" />
+                                <Label text="%Description" GridPane.rowIndex="1" />
                                 <TextField fx:id="descriptionTextField" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Button fx:id="addTask" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addTask" text="Add Task" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <Button fx:id="addTask" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addTask" text="%Add_Task" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                             </children>
                         </GridPane>
                     </children>
@@ -78,12 +78,12 @@
                         <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label fx:id="labelUserName" text="username" />
+                        <Label fx:id="labelUserName" text="%Username" />
                         <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
-                        <Label fx:id="labelPassword" text="password" GridPane.rowIndex="1" />
+                        <Label fx:id="labelPassword" text="%Password" GridPane.rowIndex="1" />
                         <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="connectionButton" mnemonicParsing="false" onMouseClicked="#connectionClick" text="Connection" GridPane.columnIndex="2" />
-                        <Button fx:id="registerButton" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" onMouseClicked="#registerClick" text="Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="connectionButton" mnemonicParsing="false" onMouseClicked="#connectionClick" text="%Connection" GridPane.columnIndex="2" />
+                        <Button fx:id="registerButton" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" onMouseClicked="#registerClick" text="%Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
             </bottom>
@@ -101,12 +101,12 @@
               </rowConstraints>
                <children>
                   
-                  <Label fx:id="taskDescription" text="description" textOverrun="CLIP" wrapText="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  <Label text="Project :" />
+                  <Label fx:id="taskDescription" text="%Description" textOverrun="CLIP" wrapText="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="%Project" />
                   <Label fx:id="projectTitleLabel" text="" GridPane.columnIndex="1" />
-                  <Label text="Task :" GridPane.rowIndex="1" />
+                  <Label text="%Task" GridPane.rowIndex="1" />
                   <Label fx:id="taskTitleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="Description :" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <Label text="%Description" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </center>

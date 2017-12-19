@@ -6,21 +6,18 @@
 package gdt.application.graphic;
 
 import gdt.assets.Project;
-import gdt.assets.ProjectList;
 import gdt.assets.Task;
 import gdt.assets.TaskListFacade;
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
@@ -109,6 +106,13 @@ public class ProjectWindowController {
     @FXML
     private ListView<Task> taskList;
     
+    //bundle
+    @FXML
+    private URL location;
+    
+    @FXML 
+    private ResourceBundle resources;
+    
     private TaskListFacade facade = new TaskListFacade();
     
     
@@ -128,7 +132,8 @@ public class ProjectWindowController {
             taskList.setVisible( !pro);
             addTaskZone.setVisible( !pro);
         if (pro){
-            menuButton.textProperty().set( "Projects :");
+            
+            menuButton.textProperty().set( resources.getString("Projects"));
             
             taskList.setMaxHeight(0);
             addTaskZone.setMaxHeight( 0);
@@ -137,7 +142,7 @@ public class ProjectWindowController {
             addProjectZone.setMaxHeight( 9999);
         }
         else{
-            menuButton.textProperty().set( "Tasks :");
+            menuButton.textProperty().set( resources.getString("Tasks"));
             
             projectList.setMaxHeight(0);
             addProjectZone.setMaxHeight( 0);
@@ -189,7 +194,7 @@ public class ProjectWindowController {
         if (projectList.getSelectionModel() == null || projectList.getSelectionModel().getSelectedItem() == null)
             return;
         if (!projectList.getSelectionModel().getSelectedItem().visible().get() && projectList.getSelectionModel().getSelectedItem().userIdProperty().get() != facade.getConnectedUser().getId()){
-            taskDescription.textProperty().set( "Private");
+            taskDescription.textProperty().set( resources.getString( "Private"));
             return;
         }
         if (taskList.selectionModelProperty() != null && 
