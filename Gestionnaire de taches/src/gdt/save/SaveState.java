@@ -9,16 +9,17 @@ public class SaveState implements Runnable {
     private Object o;
     private String path;
     private Thread thread;
-    private Thread parrent;
+    private Thread parent = null;
 
-    public SaveState(Object o, String path){
+    public SaveState( Object o, String path){
         this.o = o;
         this.path = path;
-        parrent = Thread.currentThread();
     }
 
     @Override
     public void run() {
+        if (parent == null)
+            return;
         try {
             FileOutputStream fo = new FileOutputStream( path);
             ObjectOutputStream out = new ObjectOutputStream( fo);
@@ -32,13 +33,15 @@ public class SaveState implements Runnable {
     }
 
     public synchronized void start( ){
+        parent = Thread.currentThread();
         thread = new Thread( this);
         thread.start();
     }
 
     public synchronized void stop( ){
         try {
-            parrent.join();
+            parent.join();
+            parent = null;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

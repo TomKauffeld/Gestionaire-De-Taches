@@ -83,7 +83,7 @@
                         <Label fx:id="labelPassword" text="%Password" GridPane.rowIndex="1" />
                         <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Button fx:id="connectionButton" mnemonicParsing="false" onMouseClicked="#connectionClick" text="%Connection" GridPane.columnIndex="2" />
-                        <Button fx:id="registerButton" maxWidth="92.0" minWidth="92.0" mnemonicParsing="false" onMouseClicked="#registerClick" text="%Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="registerButton" mnemonicParsing="false" onMouseClicked="#registerClick" text="%Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                     </children>
                 </GridPane>
             </bottom>
