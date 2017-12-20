@@ -3,3 +3,4 @@
 *.class
 /nbproject/private/*
 */bin/*
+/javadoc/*
