@@ -16,11 +16,11 @@ import java.time.LocalDate;
  * @see java.time.LocalDate
  * @see javafx.beans.property.Property
  */
-public class Task implements Serializable{
+public class Task implements Serializable {
 
-	private static final long serialVersionUID = -3466802709741483618L;
-	
-	private transient StringProperty title = new SimpleStringProperty();
+    private static final long serialVersionUID = -3466802709741483618L;
+
+    private transient StringProperty title = new SimpleStringProperty();
     private transient StringProperty description = new SimpleStringProperty();
     private transient BooleanProperty done = new SimpleBooleanProperty();
     private transient ObjectProperty<LocalDate> beginDate = new SimpleObjectProperty<>();
@@ -32,18 +32,19 @@ public class Task implements Serializable{
 
     /**
      * Creates an Task
-     * @param title         the title of the task
-     * @param description   the description of the task
-     * @param done          if the task is finished or not
-     * @param beginDate     the date the task begins
-     * @param endDate       the date the task should end (deadline)
+     *
+     * @param title       the title of the task
+     * @param description the description of the task
+     * @param done        if the task is finished or not
+     * @param beginDate   the date the task begins
+     * @param endDate     the date the task should end (deadline)
      */
-    protected Task( String title, String description, Boolean done,  LocalDate beginDate, LocalDate endDate){
-        setTitle( title);
-        setDescription( description);
-        setDone( done);
-        setBeginDate( beginDate);
-        setEndDate( endDate);
+    protected Task(String title, String description, Boolean done, LocalDate beginDate, LocalDate endDate) {
+        setTitle(title);
+        setDescription(description);
+        setDone(done);
+        setBeginDate(beginDate);
+        setEndDate(endDate);
     }
 
     // ////////// //
@@ -52,41 +53,46 @@ public class Task implements Serializable{
 
     /**
      * Gets the StringProperty for the title of the task
+     *
      * @return the StringProperty (title)
      */
-    public StringProperty titleProperty( ) {
+    public StringProperty titleProperty() {
         return title;
     }
 
     /**
      * Gets the StringProperty for the description of the task
+     *
      * @return the StringProperty (description)
      */
-    public StringProperty descriptionProperty( ) {
+    public StringProperty descriptionProperty() {
         return description;
     }
 
     /**
      * Gets the BooleanProperty for the done of the task
+     *
      * @return the BooleanProperty (done)
      */
-    public BooleanProperty doneProperty( ) {
+    public BooleanProperty doneProperty() {
         return done;
     }
 
     /**
      * Gets the ObjectProperty LocalDate  for the beginDate of the task
+     *
      * @return the ObjectProperty (LocalDate) (beginDate)
      */
-    public ObjectProperty<LocalDate> beginDateProperty( ) {
+    public ObjectProperty<LocalDate> beginDateProperty() {
         return beginDate;
     }
 
     /**
      * Gets the ObjectProperty LocalDate  for the endDate of the task
+     *
      * @return the ObjectProperty (LocalDate) (endDate)
      */
-    public ObjectProperty<LocalDate> endDateProperty( ) {
+    public ObjectProperty<LocalDate> endDateProperty() {
         return endDate;
     }
 
@@ -96,43 +102,47 @@ public class Task implements Serializable{
 
     /**
      * Getter for the title
+     *
      * @return the title of the task
      */
-    protected String getTitle(){
+    protected String getTitle() {
         return title.get();
     }
 
     /**
+     * Setter for the title
+     *
+     * @param title the new title of the task
+     */
+    protected void setTitle(String title) {
+        this.title.set(title);
+    }
+
+    /**
      * Getter for the description
+     *
      * @return the description of the task
      */
-    protected String getDescription(){
+    protected String getDescription() {
         return description.get();
     }
 
     /**
+     * Setter for the description
+     *
+     * @param description the new description of the task
+     */
+    protected void setDescription(String description) {
+        this.description.set(description);
+    }
+
+    /**
      * Getter for the beginDate
+     *
      * @return the date the task should begin
      */
-    protected LocalDate getBeginDate(){
+    protected LocalDate getBeginDate() {
         return beginDate.get();
-    }
-
-    /**
-     * Getter for the endDate
-     * @return the date the task should be finished
-     */
-    protected LocalDate getEndDate(){
-        return endDate.get();
-    }
-
-    /**
-     * Getter to see whether or not the task is finished
-     * @return  true    if the task is finished
-     *          false   if the task is not finished
-     */
-    protected Boolean isDone(){
-        return done.get();
     }
 
     // /////// //
@@ -140,43 +150,49 @@ public class Task implements Serializable{
     // /////// //
 
     /**
-     * Setter for the title
-     * @param title the new title of the task
-     */
-    protected void setTitle( String title){
-        this.title.set( title);
-    }
-
-    /**
-     * Setter for the description
-     * @param description   the new description of the task
-     */
-    protected void setDescription( String description){
-        this.description.set( description);
-    }
-
-    /**
-     * Setter for done
-     * @param done whether or not the task is finished/done
-     */
-    protected void setDone( Boolean done){
-        this.done.set( done);
-    }
-
-    /**
      * Setter for the beginDate
+     *
      * @param beginDate when the task should begin
      */
-    protected void setBeginDate( LocalDate beginDate){
-        this.beginDate.set( beginDate);
+    protected void setBeginDate(LocalDate beginDate) {
+        this.beginDate.set(beginDate);
+    }
+
+    /**
+     * Getter for the endDate
+     *
+     * @return the date the task should be finished
+     */
+    protected LocalDate getEndDate() {
+        return endDate.get();
     }
 
     /**
      * Setter for the endDate
-     * @param endDate   when the task should be done
+     *
+     * @param endDate when the task should be done
      */
-    protected void setEndDate( LocalDate endDate){
-        this.endDate.set( endDate);
+    protected void setEndDate(LocalDate endDate) {
+        this.endDate.set(endDate);
+    }
+
+    /**
+     * Getter to see whether or not the task is finished
+     *
+     * @return true    if the task is finished
+     * false   if the task is not finished
+     */
+    protected Boolean isDone() {
+        return done.get();
+    }
+
+    /**
+     * Setter for done
+     *
+     * @param done whether or not the task is finished/done
+     */
+    protected void setDone(Boolean done) {
+        this.done.set(done);
     }
 
     // ////////// //
@@ -185,34 +201,36 @@ public class Task implements Serializable{
 
     /**
      * Writes a task to an OutputStream
+     *
      * @param out the stream to write the task to
      * @throws IOException
      */
     private void writeObject(ObjectOutputStream out) throws IOException {
-        out.writeUTF( getTitle());
-        out.writeUTF( getDescription());
-        out.writeBoolean( isDone());
-        out.writeObject( getBeginDate());
-        out.writeObject( getEndDate());
+        out.writeUTF(getTitle());
+        out.writeUTF(getDescription());
+        out.writeBoolean(isDone());
+        out.writeObject(getBeginDate());
+        out.writeObject(getEndDate());
     }
 
     /**
      * Reads a task from the InputStream
+     *
      * @param in the stream to read the task from
      * @throws IOException
      * @throws ClassNotFoundException
      */
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         title = new SimpleStringProperty();
         description = new SimpleStringProperty();
         done = new SimpleBooleanProperty();
         beginDate = new SimpleObjectProperty<>();
         endDate = new SimpleObjectProperty<>();
-        title.set( in.readUTF());
-        description.set( in.readUTF());
-        done.set( in.readBoolean());
-        beginDate.set( (LocalDate) in.readObject());
-        endDate.set( (LocalDate) in.readObject());
+        title.set(in.readUTF());
+        description.set(in.readUTF());
+        done.set(in.readBoolean());
+        beginDate.set((LocalDate) in.readObject());
+        endDate.set((LocalDate) in.readObject());
     }
-    
+
 }

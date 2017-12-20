@@ -11,7 +11,7 @@ public class SaveState implements Runnable {
     private Thread thread;
     private Thread parent = null;
 
-    public SaveState( Object o, String path){
+    public SaveState(Object o, String path) {
         this.o = o;
         this.path = path;
     }
@@ -21,9 +21,9 @@ public class SaveState implements Runnable {
         if (parent == null)
             return;
         try {
-            FileOutputStream fo = new FileOutputStream( path);
-            ObjectOutputStream out = new ObjectOutputStream( fo);
-            out.writeObject( o);
+            FileOutputStream fo = new FileOutputStream(path);
+            ObjectOutputStream out = new ObjectOutputStream(fo);
+            out.writeObject(o);
             out.close();
             fo.close();
         } catch (IOException e) {
@@ -32,13 +32,13 @@ public class SaveState implements Runnable {
         stop();
     }
 
-    public synchronized void start( ){
+    public synchronized void start() {
         parent = Thread.currentThread();
-        thread = new Thread( this);
+        thread = new Thread(this);
         thread.start();
     }
 
-    public synchronized void stop( ){
+    public synchronized void stop() {
         try {
             parent.join();
             parent = null;

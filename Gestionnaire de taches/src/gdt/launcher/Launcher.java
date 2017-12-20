@@ -13,9 +13,10 @@ public class Launcher {
 
     /**
      * The main launcher of the application
-     * @param args  arguments to pass to the application (at this moment they are ignored)
+     *
+     * @param args arguments to pass to the application (at this moment they are ignored)
      */
-    public static void main( String... args){
+    public static void main(String... args) {
         TaskManagerApplication app = new GraphicApplication();
         app.begin();
 

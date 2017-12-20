@@ -3,17 +3,19 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<SplitPane id="AnchorPane" dividerPositions="0.2809364548494983" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gdt.application.graphic.ProjectWindowController">
+<SplitPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" dividerPositions="0.2809364548494983"
+           xmlns="http://javafx.com/javafx/8.0.60" fx:controller="gdt.application.graphic.ProjectWindowController">
     <items>
         <BorderPane fx:id="borderPane">
             <top>
-                <Button fx:id="menuButton" mnemonicParsing="false" onMouseClicked="#switchMenu" text="Button" BorderPane.alignment="CENTER" />
+                <Button fx:id="menuButton" mnemonicParsing="false" onMouseClicked="#switchMenu" text="Button"
+                        BorderPane.alignment="CENTER"/>
             </top>
             <center>
                 <FlowPane>
                     <children>
-                        <ListView fx:id="projectList" onMouseClicked="#projectSelected" BorderPane.alignment="CENTER" />
-                        <ListView fx:id="taskList" onMouseClicked="#taskSelected" BorderPane.alignment="CENTER" />
+                        <ListView fx:id="projectList" onMouseClicked="#projectSelected" BorderPane.alignment="CENTER"/>
+                        <ListView fx:id="taskList" onMouseClicked="#taskSelected" BorderPane.alignment="CENTER"/>
                     </children>
                 </FlowPane>
             </center>
@@ -22,90 +24,99 @@
                     <children>
                         <GridPane fx:id="addProjectZone">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" />
-                                <ColumnConstraints hgrow="SOMETIMES" />
+                                <ColumnConstraints hgrow="SOMETIMES"/>
+                                <ColumnConstraints hgrow="SOMETIMES"/>
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <TextField fx:id="titleProject" GridPane.columnIndex="1" />
-                                <Label text="%Title" />
-                                <CheckBox fx:id="privateProject" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Label text="%Private" GridPane.rowIndex="1" />
-                                <Button fx:id="addProjectButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addProject" text="%Add_Project" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <TextField fx:id="titleProject" GridPane.columnIndex="1"/>
+                                <Label text="%Title"/>
+                                <CheckBox fx:id="privateProject" mnemonicParsing="false" GridPane.columnIndex="1"
+                                          GridPane.rowIndex="1"/>
+                                <Label text="%Private" GridPane.rowIndex="1"/>
+                                <Button fx:id="addProjectButton" alignment="CENTER" mnemonicParsing="false"
+                                        onMouseClicked="#addProject" text="%Add_Project" GridPane.columnSpan="2"
+                                        GridPane.rowIndex="2"/>
                             </children>
                         </GridPane>
                         <GridPane fx:id="addTaskZone">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" />
-                                <ColumnConstraints hgrow="SOMETIMES" />
+                                <ColumnConstraints hgrow="SOMETIMES"/>
+                                <ColumnConstraints hgrow="SOMETIMES"/>
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints vgrow="SOMETIMES" />
-                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
                             </rowConstraints>
                             <children>
-                                <Label text="%Title" />
-                                <TextField fx:id="titleTextField" GridPane.columnIndex="1" />
-                                <Label text="%Description" GridPane.rowIndex="1" />
-                                <TextField fx:id="descriptionTextField" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Button fx:id="addTask" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#addTask" text="%Add_Task" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <Label text="%Title"/>
+                                <TextField fx:id="titleTextField" GridPane.columnIndex="1"/>
+                                <Label text="%Description" GridPane.rowIndex="1"/>
+                                <TextField fx:id="descriptionTextField" text="" GridPane.columnIndex="1"
+                                           GridPane.rowIndex="1"/>
+                                <Button fx:id="addTask" alignment="CENTER" mnemonicParsing="false"
+                                        onMouseClicked="#addTask" text="%Add_Task" GridPane.columnSpan="2"
+                                        GridPane.rowIndex="2"/>
                             </children>
                         </GridPane>
                     </children>
                 </FlowPane>
             </bottom>
         </BorderPane>
-      
+
         <BorderPane>
             <bottom>
                 <GridPane fx:id="gridConnection">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" />
-                        <ColumnConstraints hgrow="SOMETIMES" />
-                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES"/>
+                        <ColumnConstraints hgrow="SOMETIMES"/>
+                        <ColumnConstraints hgrow="SOMETIMES"/>
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints vgrow="SOMETIMES" />
-                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
                     </rowConstraints>
                     <children>
-                        <Label fx:id="labelUserName" text="%Username" />
-                        <TextField fx:id="IdConnectionField" GridPane.columnIndex="1" />
-                        <Label fx:id="labelPassword" text="%Password" GridPane.rowIndex="1" />
-                        <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="connectionButton" mnemonicParsing="false" onMouseClicked="#connectionClick" text="%Connection" GridPane.columnIndex="2" />
-                        <Button fx:id="registerButton" mnemonicParsing="false" onMouseClicked="#registerClick" text="%Register" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="labelUserName" text="%Username"/>
+                        <TextField fx:id="IdConnectionField" GridPane.columnIndex="1"/>
+                        <Label fx:id="labelPassword" text="%Password" GridPane.rowIndex="1"/>
+                        <PasswordField fx:id="passwordConnectionField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Button fx:id="connectionButton" mnemonicParsing="false" onMouseClicked="#connectionClick"
+                                text="%Connection" GridPane.columnIndex="2"/>
+                        <Button fx:id="registerButton" mnemonicParsing="false" onMouseClicked="#registerClick"
+                                text="%Register" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
                     </children>
                 </GridPane>
             </bottom>
-         <center>
-            <GridPane BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints />
-                <RowConstraints />
-                <RowConstraints valignment="CENTER" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" />
-              </rowConstraints>
-               <children>
-                  
-                  <Label fx:id="taskDescription" text="%Description" textOverrun="CLIP" wrapText="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  <Label text="%Project" />
-                  <Label fx:id="projectTitleLabel" text="" GridPane.columnIndex="1" />
-                  <Label text="%Task" GridPane.rowIndex="1" />
-                  <Label fx:id="taskTitleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label text="%Description" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-         </center>
+            <center>
+                <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints valignment="CENTER"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                    </rowConstraints>
+                    <children>
+
+                        <Label fx:id="taskDescription" text="%Description" textOverrun="CLIP" wrapText="true"
+                               GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+                        <Label text="%Project"/>
+                        <Label fx:id="projectTitleLabel" text="" GridPane.columnIndex="1"/>
+                        <Label text="%Task" GridPane.rowIndex="1"/>
+                        <Label fx:id="taskTitleLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <Label text="%Description" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                    </children>
+                </GridPane>
+            </center>
         </BorderPane>
     </items>
 </SplitPane>
