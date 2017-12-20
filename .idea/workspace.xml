@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8338003-c8ae-48ed-ab5d-03bf5c724b8e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/save/SaveState.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/save/SaveState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/TaskManagerApplication.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/TaskManagerApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectCell.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectCell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java" afterPath="$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,26 +23,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java">
+      <file leaf-file-name="TaskListFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+            <state relative-caret-position="232">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-              <folding>
-                <element signature="e#1527#1528#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
+                <element signature="e#1443#1444#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+                <element signature="e#1606#1607#0" expanded="true" />
+                <element signature="e#2548#2549#0" expanded="true" />
+                <element signature="e#2586#2587#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
+                <element signature="e#2682#2683#0" expanded="true" />
+                <element signature="e#3585#3586#0" expanded="true" />
+                <element signature="e#3629#3630#0" expanded="true" />
+                <element signature="e#3674#3675#0" expanded="true" />
+                <element signature="e#3731#3732#0" expanded="true" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3811#3812#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +52,8 @@
       <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2703">
-              <caret line="200" column="39" lean-forward="false" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
+            <state relative-caret-position="268">
+              <caret line="165" column="7" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,80 +61,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskListFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java">
+      <file leaf-file-name="ProjectList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="129" column="64" lean-forward="false" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
-              <folding>
-                <marker date="1513250903608" expanded="true" signature="4505:4569" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectWindow.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaveState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/save/SaveState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1252#1253#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1939#1940#0" expanded="true" />
+                <element signature="e#1978#1979#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PasswordHash.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectWindowController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProjectWindowController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-              <folding>
-                <marker date="1513678786363" expanded="true" signature="7048:7161" ph="{...}" />
-                <marker date="1513678786363" expanded="true" signature="7176:7223" ph="/**...*/" />
-                <marker date="1513678786363" expanded="true" signature="7249:7770" ph="{...}" />
-                <marker date="1513678786363" expanded="true" signature="7589:7770" ph="{...}" />
-                <marker date="1513678786363" expanded="true" signature="7764:7770" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GraphicApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="408">
+              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#845#846#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
+                <marker date="1513765071605" expanded="true" signature="6594:6707" ph="{...}" />
+                <marker date="1513765071605" expanded="true" signature="7135:7316" ph="{...}" />
+                <marker date="1513765071605" expanded="true" signature="7310:7316" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -167,20 +136,22 @@
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Tache.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ListeDeTaches.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/launcher/Launcher.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Task.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/SaveState.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/save/SaveState.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" />
-        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/save/SaveState.java" />
         <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/TaskManagerApplication.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectCell.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java" />
+        <option value="$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java" />
       </list>
     </option>
   </component>
@@ -309,10 +280,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -465,13 +436,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1845175" sideWeight="0.18229167" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1845175" sideWeight="0.8177083" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1845175" sideWeight="0.8177083" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,6 +458,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -497,21 +468,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -537,7 +498,8 @@
         <state relative-caret-position="136">
           <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4463#4464#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -583,8 +545,6 @@
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,7 +574,8 @@
         <state relative-caret-position="374">
           <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4463#4464#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -634,7 +595,8 @@
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="23" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4463#4464#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -674,7 +636,8 @@
         <state relative-caret-position="136">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4463#4464#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,7 +667,8 @@
         <state relative-caret-position="136">
           <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4463#4464#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -726,136 +690,10 @@
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/GestionTache.java" />
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/GestionListeDeTaches.java" />
     <entry file="file://$PROJECT_DIR$/production/Gestionaire-De-Taches/gdt/launcher/Launcher.class" />
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/TaskManagerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <marker date="1512635615212" expanded="true" signature="309:327" ph="/**...*/" />
-            <marker date="1512635615212" expanded="true" signature="714:720" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/launcher/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="71" column="33" lean-forward="false" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2703">
-          <caret line="200" column="39" lean-forward="false" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding>
-            <marker date="1513678786363" expanded="true" signature="7048:7161" ph="{...}" />
-            <marker date="1513678786363" expanded="true" signature="7176:7223" ph="/**...*/" />
-            <marker date="1513678786363" expanded="true" signature="7249:7770" ph="{...}" />
-            <marker date="1513678786363" expanded="true" signature="7589:7770" ph="{...}" />
-            <marker date="1513678786363" expanded="true" signature="7764:7770" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding>
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="129" column="64" lean-forward="false" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
-          <folding>
-            <marker date="1513250903608" expanded="true" signature="4505:4569" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,6 +708,27 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/security/PasswordHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/save/SaveState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -880,15 +739,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindow.fxml">
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/UserBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="85" column="54" lean-forward="false" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+        <state relative-caret-position="189">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2234#2235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/launcher/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="165" column="7" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/TaskManagerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/GraphicApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="25" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/TaskCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding>
+            <marker date="1513764886998" expanded="true" signature="97:112" ph="/**...*/" />
+            <marker date="1513764886998" expanded="true" signature="821:827" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/ProjectList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/assets/TaskListFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <element signature="e#3585#3586#0" expanded="true" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3674#3675#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3811#3812#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/application/graphic/ProjectWindowController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513765071605" expanded="true" signature="6594:6707" ph="{...}" />
+            <marker date="1513765071605" expanded="true" signature="7135:7316" ph="{...}" />
+            <marker date="1513765071605" expanded="true" signature="7310:7316" ph="{...}" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
