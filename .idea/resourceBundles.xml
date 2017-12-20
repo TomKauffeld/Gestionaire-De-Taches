@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang.properties" />
+    <file url="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_de.properties" />
+    <file url="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_fr.properties" />
+    <file url="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_nl.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang.properties" />
+      <file value="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_de.properties" />
+      <file value="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_fr.properties" />
+      <file value="file://$PROJECT_DIR$/Gestionnaire de taches/src/gdt/res/lang_nl.properties" />
+      <base-name>lang</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>
