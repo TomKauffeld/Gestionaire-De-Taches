@@ -24,11 +24,13 @@ import java.util.ResourceBundle;
  * @see gdt.application.graphic.TaskCell
  * @see gdt.application.graphic.GraphicApplication
  */
+
 public class ProjectWindowController {
     
     //connection
     @FXML
     private GridPane gridConnection;
+    
     @FXML
     private PasswordField passwordConnectionField;
     
@@ -89,7 +91,12 @@ public class ProjectWindowController {
     
     private TaskListFacade facade = new TaskListFacade();
     
+    private boolean pro = false;
     
+    /**
+     * 
+     * was launched when the windows was loaded
+     */
     public void initialize(){
         menuButton.prefWidthProperty().bind( borderPane.widthProperty());
         projectList.itemsProperty().bind(facade.projectsProperty());
@@ -98,7 +105,13 @@ public class ProjectWindowController {
         switchMenu();
     }
     
-    private boolean pro = false;
+    
+    
+    /**
+     * Switch the menu between Task menu and Project menu
+     * when the user is in the taskview, he can only see the task menu(interface to add tasks)
+     * when the user is in the projectview, he can only see the project menu(interface to ad projects)
+     */
     public void switchMenu(){
         pro = !pro;
             projectList.setVisible( pro);
@@ -129,10 +142,9 @@ public class ProjectWindowController {
     }
     
     /**
-     *
      * 
-     * 
-    */
+     * manage to update the taskview with the selected project
+     */
     public void projectSelected( ){
         if (taskList.itemsProperty() != null && taskList.itemsProperty().isBound()){
             taskList.itemsProperty().unbind();
@@ -154,6 +166,11 @@ public class ProjectWindowController {
         switchMenu();
     }
     
+    
+    /**
+     * 
+     * manage to update the "taskview" with the detail(description, isprivate and title of the selected Task, 
+     */
     public void taskSelected( ){
         if (taskDescription.textProperty().isBound())
             taskDescription.textProperty().unbind();
@@ -183,7 +200,7 @@ public class ProjectWindowController {
     
     /**
      *
-     * Add a project
+     * Add a project, create new Project 
      * 
     */
     public void addProject( ){
@@ -196,7 +213,7 @@ public class ProjectWindowController {
     
     /**
      *
-     * register a new user
+     * register a new user, create a new user
      * 
     */
     public void registerClick(){
@@ -209,7 +226,7 @@ public class ProjectWindowController {
     
     /**
      *
-     * connect an user
+     * connect an user who as already register
      * 
     */
     public void connectionClick(){
@@ -223,7 +240,7 @@ public class ProjectWindowController {
     
     /**
      *
-     * add a new task
+     * add a new task, create a new task
      * 
     */
     public void addTask(){
