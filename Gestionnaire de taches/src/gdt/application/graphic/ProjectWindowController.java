@@ -1,27 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gdt.application.graphic;
 
 import gdt.assets.Project;
 import gdt.assets.Task;
 import gdt.assets.TaskListFacade;
-import java.net.URL;
-import java.time.LocalDate;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+
+import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -40,15 +29,6 @@ public class ProjectWindowController {
     @FXML
     private TextField IdConnectionField;
     
-    @FXML
-    private Button connectionButton;
-    
-    @FXML
-    private Label labelUserName;
-    
-    @FXML
-    private Label labelPassword;
-    
     
     //add project
     @FXML
@@ -62,9 +42,6 @@ public class ProjectWindowController {
     
     @FXML
     private CheckBox privateProject;
-    
-    @FXML
-    private Button addProjectButton;
     
     
     //add task
@@ -88,11 +65,7 @@ public class ProjectWindowController {
     
     @FXML
     private Label taskTitleLabel;
-    
-    
-    
-    @FXML 
-    private FlowPane connectionZone;
+
     
     @FXML
     private BorderPane borderPane;
@@ -107,8 +80,6 @@ public class ProjectWindowController {
     private ListView<Task> taskList;
     
     //bundle
-    @FXML
-    private URL location;
     
     @FXML 
     private ResourceBundle resources;

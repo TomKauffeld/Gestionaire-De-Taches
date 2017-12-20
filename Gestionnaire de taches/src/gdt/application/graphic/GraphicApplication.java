@@ -1,12 +1,13 @@
 package gdt.application.graphic;
 
 import gdt.application.TaskManagerApplication;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class GraphicApplication extends Application implements TaskManagerApplication{
 

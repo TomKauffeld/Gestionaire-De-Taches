@@ -2,13 +2,13 @@ package gdt.assets;
 
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.List;
-import javafx.collections.FXCollections;
 
 public class ProjectList implements Serializable{
 
