@@ -4,7 +4,12 @@ import gdt.assets.Project;
 import gdt.assets.Task;
 import gdt.assets.TaskListFacade;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -13,10 +18,11 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 /**
- *
  * @author Florian DELCROIX
  * @version 1
- * 
+ * @see gdt.application.graphic.ProjectCell
+ * @see gdt.application.graphic.TaskCell
+ * @see gdt.application.graphic.GraphicApplication
  */
 public class ProjectWindowController {
     
@@ -50,9 +56,6 @@ public class ProjectWindowController {
     
     @FXML
     private TextField descriptionTextField;
-    
-    @FXML
-    private Button addTask;
     
     @FXML
     private Label taskDescription;

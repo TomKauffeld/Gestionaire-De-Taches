@@ -4,17 +4,17 @@ import gdt.assets.Project;
 import javafx.scene.control.ListCell;
 
 /**
- *
  * @author Florian DELCROIX
  * @version 1
- * 
+ * @see gdt.assets.Project
  */
 public class ProjectCell extends ListCell<Project> {
 
-    public ProjectCell(){
-        
-    }
-    
+    /**
+     *
+     * @param item The new Project for the cell.
+     * @param empty whether or not this cell represents data from the list. If it is empty, then it does not represent any domain data, but is a cell being used to render an "empty" row.
+     */
     @Override
     protected void updateItem(Project item, boolean empty){
         super.updateItem(item, empty);
@@ -23,7 +23,8 @@ public class ProjectCell extends ListCell<Project> {
             textProperty().bind(item.titleProperty().concat( item.visible().getValue() ? " (+)" : " (-)"));
         }
         else{
-            textProperty().unbind();
+            if (textProperty().isBound())
+                textProperty().unbind();
             textProperty().set( "");
         }
             

@@ -3,12 +3,11 @@ package gdt.user;
 import security.PasswordHash;
 
 import java.io.Serializable;
-import java.security.NoSuchAlgorithmException;
 
 /**
  *  @author Tom KAUFFELD
  *  @version 1
- *  @see java.io.Serializable
+ *  @see security.PasswordHash
  */
 public class User implements Serializable{
 
@@ -45,11 +44,7 @@ public class User implements Serializable{
      *          false   if the password is incorrect
      */
     public boolean isPasswordCorrect( String password){
-        try {
-            return PasswordHash.verify( password, this.password);
-        } catch (NoSuchAlgorithmException e) {
-            return false;
-        }
+        return PasswordHash.verify( password, this.password);
     }
 
     // /////// //
@@ -87,11 +82,7 @@ public class User implements Serializable{
      * @param password the new password for the user
      */
     private void setPassword( String password) {
-        try {
-            this.password = PasswordHash.sha256( password);
-        } catch (NoSuchAlgorithmException e) {
-            this.password = "ERROR";
-        }
+        this.password = PasswordHash.sha256( password);
     }
 
     /**

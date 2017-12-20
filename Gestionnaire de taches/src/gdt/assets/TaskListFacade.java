@@ -1,4 +1,3 @@
-
 package gdt.assets;
 
 import gdt.save.SaveState;
@@ -12,8 +11,17 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.time.LocalDate;
 
+/**
+ *  @author Florian DELCROIX
+ *  @author Tom KAUFFELD
+ *  @version 1
+ *  @see gdt.save.SaveState
+ *  @see gdt.assets.Project
+ *  @see gdt.assets.ProjectList
+ *  @see gdt.user.User
+ *  @see gdt.user.UserBase
+ */
 public class TaskListFacade {
-
 
     private static final String PROJECTS_PATH = System.getProperty( "user.dir").replace( "\\", "/") + "/projects.bin";
 
@@ -23,26 +31,65 @@ public class TaskListFacade {
     private User connectedUser;
     private UserBase userBase = new UserBase();
 
+    // /////////// //
+    // Constructor //
+    // /////////// //
+
+    /**
+     * Creates an TaskListFacade
+     */
     public TaskListFacade(){
         loadProjects();
         loadUsers();
         setConnectedUser( User.GUEST_USER);
     }
-    
-    public void setConnectedUser( User user){
+
+    // //////////////////// //
+    // User related Methods //
+    // //////////////////// //
+
+    /**
+     * Sets the connected User to the user specified
+     * @param user the user to 'connect'
+     */
+    public void setConnectedUser(User user){
         connectedUser = user;
     }
-    
+
+    /**
+     * Gets the connected User
+     * @return the user that is connected
+     */
     public User getConnectedUser( ){
         return connectedUser;
     }
 
-    public void saveProjects( ){
-        saveProjects( PROJECTS_PATH);
+    /**
+     * Adds a new User to the userBase
+     * @param password the password of the new User
+     * @param username the username of the new User
+     * @return true if the user could be added, false otherwise
+     */
+    public boolean addNewUser(String password, String username){
+        boolean ret = userBase.addUser(password, username);
+        if (ret)
+            saveUsers();
+        return ret;
     }
 
-    public void saveProjects( String path){
-        new SaveState( projectList, path).start();
+    /**
+     * Connects an User
+     * @param password the password of the user
+     * @param username the username of the user
+     * @return true if the connection was successful, false otherwise
+     */
+    public boolean connection(String password, String username){
+        setConnectedUser( userBase.connectUser(username, password));
+        if (getConnectedUser( ) == null){
+            setConnectedUser( User.GUEST_USER);
+            return false;
+        }
+        return true;
     }
 
     public void saveUsers( ){
@@ -51,30 +98,6 @@ public class TaskListFacade {
 
     public void saveUsers( String path){
         new SaveState( userBase, path).start();
-    }
-
-    public void loadProjects( ){
-        loadProjects( PROJECTS_PATH);
-    }
-
-    public void loadProjects( String path){
-        try{
-            FileInputStream fi = new FileInputStream( path);
-            ObjectInputStream in = new ObjectInputStream( fi);
-            projectList = (ProjectList) in.readObject();
-            in.close();
-            fi.close();
-        } catch (FileNotFoundException e) {
-            System.err.println( e.getMessage() + ", creating new projectList");
-            projectList = new ProjectList();
-        } catch (IOException e) {
-            System.err.println( e.getMessage() + ", creating new projectList");
-            projectList = new ProjectList();
-        } catch (ClassNotFoundException e) {
-            System.err.println( e.getMessage() + ", creating new projectList");
-            e.printStackTrace();
-            projectList = new ProjectList();
-        }
     }
 
     public void loadUsers( ){
@@ -100,6 +123,44 @@ public class TaskListFacade {
             userBase = new UserBase();
         }
     }
+
+
+
+    public void saveProjects( ){
+        saveProjects( PROJECTS_PATH);
+    }
+
+    public void saveProjects( String path){
+        new SaveState( projectList, path).start();
+    }
+
+
+
+    public void loadProjects( ){
+        loadProjects( PROJECTS_PATH);
+    }
+
+    public void loadProjects( String path){
+        try{
+            FileInputStream fi = new FileInputStream( path);
+            ObjectInputStream in = new ObjectInputStream( fi);
+            projectList = (ProjectList) in.readObject();
+            in.close();
+            fi.close();
+        } catch (FileNotFoundException e) {
+            System.err.println( e.getMessage() + ", creating new projectList");
+            projectList = new ProjectList();
+        } catch (IOException e) {
+            System.err.println( e.getMessage() + ", creating new projectList");
+            projectList = new ProjectList();
+        } catch (ClassNotFoundException e) {
+            System.err.println( e.getMessage() + ", creating new projectList");
+            e.printStackTrace();
+            projectList = new ProjectList();
+        }
+    }
+
+
 
     public void addNewProject( String title){
         if (isConnected())
@@ -130,20 +191,6 @@ public class TaskListFacade {
         return projectList.projectsProperty();
     }
     
-    public boolean addNewUser(String password, String username){
-        boolean ret = userBase.addUser(password, username);
-        if (ret)
-            saveUsers();
-        return ret;
-    }
-    
-    public boolean connection(String password, String username){
-        setConnectedUser( userBase.connectUser(username, password));
-        if (getConnectedUser( ) == null){
-            setConnectedUser( User.GUEST_USER);
-            return false;
-        }
-        return true;
-    }
+
 
 }

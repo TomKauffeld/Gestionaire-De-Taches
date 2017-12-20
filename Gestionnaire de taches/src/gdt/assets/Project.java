@@ -27,32 +27,6 @@ public class Project implements Serializable{
 	private transient LongProperty userId = new SimpleLongProperty();
 	private transient BooleanProperty visible = new SimpleBooleanProperty();
 
-
-	private void writeObject(ObjectOutputStream out) throws IOException{
-		out.writeUTF( title.get());
-		out.writeLong( userId.get());
-		out.writeBoolean( visible.get());
-		if(tasks==null || tasks.getValue()==null) {
-			out.writeInt(0);
-			return;
-		}
-		out.writeInt( tasks.size());
-		for(Task task : tasks)
-			out.writeObject(task);
-	}
-
-	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
-            title = new SimpleStringProperty();
-            userId = new SimpleLongProperty();
-            visible = new SimpleBooleanProperty();
-            tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
-		setTitle( in.readUTF());
-		setUserId( in.readLong());
-		setVisible( in.readBoolean());
-		int nbList = in.readInt();
-		for (int i = 0; i < nbList; i++)
-			tasks.add( (Task) in.readObject());
-	}
 	// /////////// //
 	// Constuctors //
 	// /////////// //
@@ -87,7 +61,7 @@ public class Project implements Serializable{
 	}
 
 	// ////////// //
-	// Propreties //
+	// Properties //
     // ////////// //
 
     /**
@@ -208,6 +182,47 @@ public class Project implements Serializable{
      */
 	protected void addTask( Task task) {
 		tasks.add( task);
+	}
+
+	// ////////// //
+	// Read/Write //
+	// ////////// //
+
+    /**
+     * writes the Project to the ObjectOutputStream
+     * @param out the ObjectOutputStream to write the Project to
+     * @throws IOException
+     */
+	private void writeObject(ObjectOutputStream out) throws IOException{
+		out.writeUTF( title.get());
+		out.writeLong( userId.get());
+		out.writeBoolean( visible.get());
+		if(tasks==null || tasks.getValue()==null) {
+			out.writeInt(0);
+			return;
+		}
+		out.writeInt( tasks.size());
+		for(Task task : tasks)
+			out.writeObject(task);
+	}
+
+    /**
+     * reads an Project from an ObjectInputStream
+     * @param in the ObjectInputStream to read the Project from
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException{
+		title = new SimpleStringProperty();
+		userId = new SimpleLongProperty();
+		visible = new SimpleBooleanProperty();
+		tasks = new SimpleListProperty<>(FXCollections.observableArrayList());
+		setTitle( in.readUTF());
+		setUserId( in.readLong());
+		setVisible( in.readBoolean());
+		int nbList = in.readInt();
+		for (int i = 0; i < nbList; i++)
+			tasks.add( (Task) in.readObject());
 	}
 
 }
