@@ -92,18 +92,32 @@ public class TaskListFacade {
         return true;
     }
 
+    /**
+     * Saves the userBase to the default path
+     */
     public void saveUsers( ){
         saveUsers( USERS_PATH);
     }
 
+    /**
+     * Saves the userBase to the path specified
+     * @param path the path to save the UserBase to
+     */
     public void saveUsers( String path){
         new SaveState( userBase, path).start();
     }
 
+    /**
+     * Loads the userBase from the default path
+     */
     public void loadUsers( ){
         loadUsers( USERS_PATH);
     }
 
+    /**
+     * Loads the userBase from the path specified
+     * @param path the path to load the userBase from
+     */
     public void loadUsers( String path){
         try{
             FileInputStream fi = new FileInputStream( path);
@@ -124,22 +138,44 @@ public class TaskListFacade {
         }
     }
 
+    /**
+     * Checks if an user is connected
+     * @return true if an user is connected, false if not
+     */
+    public boolean isConnected( ){
+        return (getConnectedUser( ).getId() != User.GUEST_ID);
+    }
 
+    // /////////////////////// //
+    // Project related Methods //
+    // /////////////////////// //
 
+    /**
+     * Saves the projects to the default path
+     */
     public void saveProjects( ){
         saveProjects( PROJECTS_PATH);
     }
 
+    /**
+     * Saves the projects to the path specified
+     * @param path the path to save the projects to
+     */
     public void saveProjects( String path){
         new SaveState( projectList, path).start();
     }
 
-
-
+    /**
+     * Loads the projects from the default path
+     */
     public void loadProjects( ){
         loadProjects( PROJECTS_PATH);
     }
 
+    /**
+     * Loads the projects from the path specified
+     * @param path the path to load the projects from
+     */
     public void loadProjects( String path){
         try{
             FileInputStream fi = new FileInputStream( path);
@@ -160,8 +196,10 @@ public class TaskListFacade {
         }
     }
 
-
-
+    /**
+     * Adds a new project
+     * @param title the title of the project
+     */
     public void addNewProject( String title){
         if (isConnected())
             projectList.addProject( new Project( title, getConnectedUser( ).getId()));
@@ -170,6 +208,11 @@ public class TaskListFacade {
         saveProjects( );
     }
 
+    /**
+     * Adds a new project
+     * @param title the title of the project
+     * @param visible if the project is visible or not
+     */
     public void addNewProject( String title, boolean visible){
         if (!isConnected())
             visible = true;
@@ -177,20 +220,30 @@ public class TaskListFacade {
         saveProjects( );
     }
 
+    /**
+     * The projectList property
+     * @return the list property
+     */
+    public ListProperty<Project> projectsProperty(){
+        return projectList.projectsProperty();
+    }
+
+    // /////////////////// //
+    // Task related Method //
+    // /////////////////// //
+
+    /**
+     * Adds a new task to an project
+     * @param project the project to add it to
+     * @param title the title of the Task
+     * @param description the description of the Task
+     * @param done if the task is done
+     * @param beginDate the date the task should begin
+     * @param endDate the date the task sould end
+     */
     public void addNewTask( Project project, String title, String description, boolean done, LocalDate beginDate, LocalDate endDate){
         if (getConnectedUser( ).getId() == project.getUserId() || project.getUserId() == User.GUEST_ID)
             project.addTask( new Task( title, description, done, beginDate, endDate));
         saveProjects( );
     }
-
-    public boolean isConnected( ){
-        return (getConnectedUser( ).getId() != User.GUEST_ID);
-    }
-
-    public ListProperty<Project> projectsProperty(){
-        return projectList.projectsProperty();
-    }
-    
-
-
 }

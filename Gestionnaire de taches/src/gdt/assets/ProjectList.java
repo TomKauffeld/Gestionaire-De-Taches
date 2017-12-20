@@ -39,7 +39,7 @@ public class ProjectList implements Serializable{
      * Gets the ListProperty of the project of the list
      * @return the ListProperty of Project(s) (projects)
      */
-    public ListProperty<Project> projectsProperty() {
+    protected ListProperty<Project> projectsProperty() {
         return projects;
     }
 
